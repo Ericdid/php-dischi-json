@@ -25,6 +25,12 @@
     <script src="./js/main.js" defer></script>
   </head>
   <body id="app">
-    <h1>hello</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col" v-for="disks in disksList">
+          <h1>{{disks.title}}</h1>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
