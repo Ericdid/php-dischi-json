@@ -24,11 +24,17 @@
     <!-- Javascript -->
     <script src="./js/main.js" defer></script>
   </head>
-  <body id="app">
-    <div class="container">
-      <div class="row">
-        <div class="col" v-for="disks in disksList">
-          <h1>{{disks.title}}</h1>
+  <body>
+    <div class="wrapper" id="app">
+      <div class="container">
+        <div class="row justify-content-around">
+          <div class="col-3 mx-4 my-3" v-for="disks in disksList" id="card">
+            <h3>{{disks.title}}</h3>
+            <h5>{{disks.author}}</h5>
+            <img :src="disks.poster" alt="" class="w-100" />
+            <b>{{disks.year}} </b>
+            <p>{{disks.genre}}</p>
+          </div>
         </div>
       </div>
     </div>
